@@ -23,7 +23,7 @@ export interface WebviewOverlayOpenOptions {
     element: HTMLElement;
 }
 
-class WebviewOverlayClass {
+export class WebviewOverlay {
 
     element: HTMLElement;
     updateSnapshotEvent: PluginListenerHandle;
@@ -175,7 +175,4 @@ class WebviewOverlayClass {
     loadUrl(url: string) {
         return WebviewOverlayPlugin.loadUrl({ url });
     }
-
 }
-
-export const WebviewOverlay = new WebviewOverlayClass();
