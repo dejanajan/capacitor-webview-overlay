@@ -1,4 +1,9 @@
 import { PluginListenerHandle } from '@capacitor/core';
+declare global {
+    interface PluginRegistry {
+        WebviewOverlayPlugin?: IWebviewOverlayPlugin;
+    }
+}
 
 export interface IWebviewOverlayPlugin {
     /**
@@ -55,7 +60,7 @@ interface Dimensions {
     y: number;
 }
 
-export enum ScriptInjectionTime {
-    atDocumentStart,
-    atDocumentEnd
+export declare enum ScriptInjectionTime {
+    atDocumentStart = 0,
+    atDocumentEnd = 1
 }
